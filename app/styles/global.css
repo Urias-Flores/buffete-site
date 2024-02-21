@@ -1,0 +1,211 @@
+:root{
+    --blue: #349dd8;
+    --ligth-gray: #f0f2f4;
+}
+
+h1, h2, h3, h4, p, a{
+    margin: 0;
+}
+
+body{
+    font-family: "Lora", Arial, serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.heading{
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*------------------ Header ------------------------*/
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    -webkit-box-shadow: 0 0 20px 0 rgba(179,179,179,1);
+    -moz-box-shadow: 0 0 20px 0 rgba(179,179,179,1);
+    box-shadow: 0 0 20px 0 rgba(179,179,179,1);
+}
+
+.header{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo_brand{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.logo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.flag{
+    height: 2.5rem;
+}
+
+.navigator{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navigator_route{
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.navigator_route:hover{
+    color: var(--blue);
+}
+
+.navigator_route.active{
+    color: var(--blue);
+}
+/*------------------ Header ------------------------*/
+
+/* ----------------- Brand -------------------------*/
+.brand {
+    font-family: "Monserrat", Arial, serif;
+    width: 10rem;
+    padding: 1rem 0;
+}
+
+.brand .grafic{
+    height: 3px;
+    background: linear-gradient(90deg, #cda74d 0%, transparent 35%, transparent 50%, transparent 65%, #cda74d 100%);
+}
+
+.group-text{
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.brand .names{
+    display: flex;
+    justify-content: space-between;
+}
+
+.names-text{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.brand .subtitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitle-text{
+    font-size: .5rem;
+    font-weight: lighter;
+}
+
+@media only screen and (max-width: 767px) {
+    .brand{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .group-text{
+        font-size: 1.6rem;
+    }
+
+    .names-text{
+        font-size: 2.7rem;
+    }
+
+    .subtitle-text{
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .brand{
+        width: 21rem;
+    }
+}
+/* ----------------- Brand -------------------------*/
+
+/* ----------------- Team --------------------------*/
+.team{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.member_photo{
+    width: 15rem;
+}
+
+.member_name{
+    margin-top: .5rem;
+    color: var(--blue);
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+}
+
+.member_information{
+    text-align: center;
+    font-size: .9rem;
+}
+/* ----------------- Team --------------------------*/
+
+/* ----------------- Services ----------------------*/
+.team + .heading{
+    margin-top: 9rem;
+}
+
+.services{
+    display: flex;
+    margin: 2rem auto 0 auto;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.service{
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.service:nth-child(1), .service:nth-child(3){
+    background-color: var(--ligth-gray);
+}
+
+.service_number{
+    font-size: 2.5rem;
+}
+
+.number_line{
+    width: 4rem;
+}
+
+.service_title{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.service_link{
+    display: block;
+    font-family: Arial;
+    color: var(--blue);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    font-size: 1rem;
+}
+/* ----------------- Services ----------------------*/
