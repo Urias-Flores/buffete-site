@@ -1,5 +1,6 @@
 :root{
     --blue: #349dd8;
+    --dark-blue: #015989;
     --ligth-gray: #f0f2f4;
 }
 
@@ -139,73 +140,55 @@ header{
 }
 /* ----------------- Brand -------------------------*/
 
-/* ----------------- Team --------------------------*/
-.team{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.5rem;
+/* ----------------- Footer ------------------------*/
+.footer{
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    background-color: var(--dark-blue);
+    padding: 3rem;
+    color: white;
+    font-size: .8rem;
 }
 
-.member_photo{
-    width: 15rem;
+.enterprise_name{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-.member_name{
-    margin-top: .5rem;
-    color: var(--blue);
-    font-weight: normal;
-    font-style: italic;
-    text-align: center;
-}
-
-.member_information{
-    text-align: center;
+.enterprise_information, .enterprise_copyrigth{
     font-size: .9rem;
-}
-/* ----------------- Team --------------------------*/
-
-/* ----------------- Services ----------------------*/
-.team + .heading{
-    margin-top: 9rem;
+    color: gray;
 }
 
-.services{
-    display: flex;
-    margin: 2rem auto 0 auto;
-    justify-content: space-between;
-    text-align: center;
+.enterprise_information{
+    margin-bottom: 1rem;
 }
 
-.service{
-    padding: 2rem;
-    flex-grow: 1;
+.contact_address{
+    margin-bottom: 1rem;
 }
 
-.service:nth-child(1), .service:nth-child(3){
-    background-color: var(--ligth-gray);
+.contact_email{
+    margin-bottom: .5rem;
 }
 
-.service_number{
-    font-size: 2.5rem;
-}
-
-.number_line{
-    width: 4rem;
-}
-
-.service_title{
-    margin-top: 3rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.service_link{
-    display: block;
-    font-family: Arial;
-    color: var(--blue);
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+.contact_email, .contact_phone{
     font-size: 1rem;
 }
-/* ----------------- Services ----------------------*/
+
+.contact_simbols{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact_simbols img{
+    padding: .8rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border-radius: 45%;
+}
+/* ----------------- Footer ------------------------*/
