@@ -1,0 +1,24 @@
+.heading{
+    background-color: var(--dark-blue);
+    color: white;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.services{
+    line-height: 2;
+    width: 40%;
+    margin: 2rem auto;
+}
+
+.service_subject{
+    width: 40%;
+    margin: 2rem auto 0 auto;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.service_subject + .services {
+    margin-top: .5rem;
+}
