@@ -1,0 +1,56 @@
+.container{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.subheading{
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.flex{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subheading{
+    margin-top: 1rem;
+}
+
+.banner_image{
+    width: 100%;
+}
+
+.form{
+    background: white;
+    width: 50%;
+    height: 25rem;
+    margin: -25rem auto 0 35rem;
+}
+
+.form input{
+    padding: .5rem;
+    border-radius: .7rem;
+    border: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+
+.form textarea{
+    border: none;
+    border-radius: .7rem;
+    height: 4rem;
+    width: 100%;
+    outline: none;
+    padding: .5rem;
+}
+
+.form input[type='submit']{
+    margin-top: 1.5rem;
+    color: white;
+    background-color: var(--blue);
+}

@@ -75,6 +75,44 @@ header{
 .navigator_route.active{
     color: var(--blue);
 }
+
+.nav_services{
+    position: absolute;
+    margin-left: -10rem;
+    background-color: white;
+    padding: 1rem 2rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(179,179,179,1);
+    -moz-box-shadow: 0 0 20px 0 rgba(179,179,179,1);
+    box-shadow: 0 0 20px 0 rgba(179,179,179,1);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.nav_services.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav_services:hover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav_services li{
+    list-style-type: none;
+}
+
+.nav_service{
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: .3rem;
+}
+
+.nav_service:hover{
+    color: var(--blue);
+}
 /*------------------ Header ------------------------*/
 
 /* ----------------- Brand -------------------------*/
