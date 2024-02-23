@@ -111,6 +111,8 @@ header{
 }
 
 .nav_service{
+    margin: 0 0 0 1rem;
+    font-size: 1.1rem;
     display: block;
     text-decoration: none;
     color: black;
@@ -175,20 +177,11 @@ header{
         align-items: center;
     }
 
-    .navigator_route_services p {
-        overflow: hidden;
-    }
-
-    .navigator_route{
-        overflow: hidden;
-    }
-
     .nav_services{
         position: static;
         margin: 0;
         padding: 0;
         height: 0;
-        opacity: 0;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
@@ -198,8 +191,12 @@ header{
     }
 
     .nav_services.active{
-        opacity: 1;
-        height: 13rem;
+        height: calc(1.5rem * 5);
+    }
+
+    .nav_service{
+        height: 1.5rem;
+        margin: 0 0 0 1rem;
     }
 
     .menu_icon.active{
@@ -217,7 +214,7 @@ header{
         background-color: rgba(255, 255, 255, .5);
         backdrop-filter: blur(5px);
         transition: width 500ms ease, padding 500ms ease;
-        
+        overflow: hidden;
     }
 
     .navigator.active{
