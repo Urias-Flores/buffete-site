@@ -12,7 +12,7 @@ export function links(){
 }
 
 export default function contact (){
-  const [name, setNombre] = useState('')
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
@@ -30,14 +30,17 @@ export default function contact (){
       <img src="/images/about-banner.jpg" alt="banner" className='banner_image'/>
 
       <form className='form' action="post">
-        <input type="text" placeholder='Nombre'/>
-        <input type="text" placeholder='Correo Electroncio'/>
+        <input type="text" placeholder='Nombre' value={name} onChange={(e) => { setName( e.target.value ) }}/>
+        <input type="text" placeholder='Correo Electroncio' value={email} onChange={(e) => { setEmail(e.target.value) }}/>
 
-        <input type="text" placeholder='Teléfono'/>
+        <input type="text" placeholder='Teléfono' value={phone} onChange={(e) => { setPhone(e.target.value) }}/>
         <textarea
           name="message"
           id="message"
-          placeholder='Escribe tu mensaje aqui'>
+          placeholder='Escribe tu mensaje aqui'
+          value={message}
+          onChange={(e) => { setMessage(e.target.value) }}
+        >
         </textarea>
 
         <input type="submit" value='Enviar'/>
