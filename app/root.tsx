@@ -80,8 +80,9 @@ function Document({children}: { children: ReactNode }){
    <Footer/>
    <ScrollRestoration/>
    <Scripts/>
-        <LiveReload/>
-      </body>
+    
+    <LiveReload/>
+    </body>
    </html>
   )
 }

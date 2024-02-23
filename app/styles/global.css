@@ -127,6 +127,11 @@ header{
     z-index: 1;
 }
 
+.chevron{
+    visibility: hidden;
+    display: none;
+}
+
 @media only screen and (max-width: 767px) {
     .flag{
         visibility: hidden;
@@ -152,6 +157,42 @@ header{
         transition: rotate 500ms ease;
     }
 
+    .chevron{
+        visibility: visible;
+        display: block;
+        width: 1.8rem;
+        transition: rotate 500ms ease;
+    }
+
+    .chevron.active{
+        rotate: -180deg;
+    }
+
+    .navigator_route_services{
+        display: flex;
+        justify-content: space-between;    
+        align-items: center;
+    }
+
+    .nav_services{
+        position: static;
+        margin: 0;
+        padding: 0;
+        height: 0;
+        opacity: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        background: none;
+        line-height: 1.5;
+        transition: height 500ms ease, opacity 500ms ease;
+    }
+
+    .nav_services.active{
+        opacity: 1;
+        height: 12rem;
+    }
+
     .menu_icon.active{
         rotate: 90deg;
     }
@@ -167,15 +208,16 @@ header{
         background-color: rgba(255, 255, 255, .5);
         backdrop-filter: blur(5px);
         transition: left 500ms ease;
-        /*
-        visibility: hidden;
-        height: 0;
-        width: 0;
-        */
     }
 
     .navigator.active{
         left: 0;
+    }
+
+    .navigator_route{
+        border-bottom: 1px solid black;
+        width: 85%;
+        padding-bottom: 1rem;
     }
 }
 /*------------------ Header ------------------------*/

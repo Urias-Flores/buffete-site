@@ -22,21 +22,26 @@ export default function Navigator (){
           <Link className='navigator_route' to='/' onClick={ () => { setShowMenu(false) }}>Inicio</Link>
           <Link className='navigator_route' to='/about' onClick={ () => { setShowMenu(false) }}>Acerca de</Link>
           <div className='navigator_route'>
-            <p
-              onClick={ () => {setShowServices(!showServices)}}
-              onMouseEnter={ () => {setShowServices(true)}}
-              onMouseLeave={ () => {hideServices()}}
-            >
-              Servicios
-            </p>
+            <div className='navigator_route_services'>
+              <p
+                onClick={ () => {setShowServices(!showServices)}}
+                onMouseEnter={ () => {setShowServices(true)}}
+                onMouseLeave={ () => {hideServices()}}
+              >
+                Servicios
+              </p>
+
+              <img src="/images/chevron-down.svg" alt="chevron" className={`chevron ${ showServices && 'active' }`}/>
+            </div>
+
             <ul
               className={`nav_services ${showServices ? 'active' : ''}` }
             >
-              <li><Link className='nav_service' to='/services/tramites-no-contenciosos'>Trámites no contenciosos</Link></li>
-              <li><Link className='nav_service'  to='/services/tramites-administrativos'>Trámites administrativos</Link></li>
-              <li><Link className='nav_service'  to='/services/escrituras-publicas'>Escrituras públicas</Link></li>
-              <li><Link className='nav_service'  to='/services/documentos-privados'>Documentos privados</Link></li>
-              <li><Link className='nav_service'  to='/services/representaciones-procesales'>Representaciones procesales</Link></li>
+              <li><Link className='nav_service' to='/services/tramites-no-contenciosos' onClick={ () => { setShowMenu(false) }}>Trámites no contenciosos</Link></li>
+              <li><Link className='nav_service'  to='/services/tramites-administrativos' onClick={ () => { setShowMenu(false) }}>Trámites administrativos</Link></li>
+              <li><Link className='nav_service'  to='/services/escrituras-publicas' onClick={ () => { setShowMenu(false) }}>Escrituras públicas</Link></li>
+              <li><Link className='nav_service'  to='/services/documentos-privados' onClick={ () => { setShowMenu(false) }}>Documentos privados</Link></li>
+              <li><Link className='nav_service'  to='/services/representaciones-procesales' onClick={ () => { setShowMenu(false) }}>Representaciones procesales</Link></li>
             </ul>
           </div>
           <Link className='navigator_route' to='/contact' onClick={ () => { setShowMenu(false) }}>Contacto</Link>
