@@ -3,6 +3,7 @@ import Logo from "~/components/logo";
 import {useState} from "react";
 export default function Navigator (){
   const [showServices, setShowServices] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const hideServices = () => {
     setTimeout(() => {
       setShowServices(false)
@@ -17,11 +18,12 @@ export default function Navigator (){
           <Logo/>
           <img src="/images/flag.png" alt="flag" className='flag'/>
         </div>
-        <nav className='navigator'>
-          <Link className='navigator_route' to='/'>Inicio</Link>
-          <Link className='navigator_route' to='/about'>Acerca de</Link>
+        <nav className={`navigator ${ showMenu && 'active'}`}>
+          <Link className='navigator_route' to='/' onClick={ () => { setShowMenu(false) }}>Inicio</Link>
+          <Link className='navigator_route' to='/about' onClick={ () => { setShowMenu(false) }}>Acerca de</Link>
           <div className='navigator_route'>
             <p
+              onClick={ () => {setShowServices(!showServices)}}
               onMouseEnter={ () => {setShowServices(true)}}
               onMouseLeave={ () => {hideServices()}}
             >
@@ -37,8 +39,15 @@ export default function Navigator (){
               <li><Link className='nav_service'  to='/services/representaciones-procesales'>Representaciones procesales</Link></li>
             </ul>
           </div>
-          <Link className='navigator_route' to='/contact'>Contacto</Link>
+          <Link className='navigator_route' to='/contact' onClick={ () => { setShowMenu(false) }}>Contacto</Link>
         </nav>
+
+        <img 
+          src="/images/menu.svg"
+          alt="menu" 
+          className={`menu_icon ${ showMenu && 'active' }`}
+          onClick={ () => { setShowMenu(!showMenu) }}
+        />
       </div>
     </header>
   )

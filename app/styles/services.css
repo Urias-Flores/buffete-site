@@ -22,3 +22,9 @@
 .service_subject + .services {
     margin-top: .5rem;
 }
+
+@media only screen and (max-width: 767px){
+    .services{
+        width: 75%;
+    }
+}

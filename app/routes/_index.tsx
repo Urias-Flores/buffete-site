@@ -120,7 +120,7 @@ export default function Index() {
       <section className='phrase'>
         <Link className='phrase_contact' to='/contact'>Contáctanos</Link>
         <p className='phrase_apostrophe'>&ldquo;</p>
-        <p className='phrase_text'>No hay abogado más elocuente que el corazón</p>
+        <p className='phrase_text'>No hay abogado más <br/> elocuente que el corazón</p>
         <p className='phrase_autor'>Sylvain Maréchal (1788)</p>
       </section>
     </main>

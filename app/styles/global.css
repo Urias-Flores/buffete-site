@@ -23,6 +23,12 @@ body{
     text-align: center;
 }
 
+
+@media only screen and (max-width: 767px) {
+    .heading{
+        font-size: 1.7rem;
+    }
+}
 /*------------------ Header ------------------------*/
 header{
     position: sticky;
@@ -35,7 +41,7 @@ header{
 
 .header{
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
@@ -113,6 +119,65 @@ header{
 .nav_service:hover{
     color: var(--blue);
 }
+
+.menu_icon{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 767px) {
+    .flag{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    .logo_brand{
+        justify-content: space-between;
+    }
+
+    .logo{
+        margin: .3rem 0;
+    }
+
+    .menu_icon{
+        visibility: visible;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--ligth-gray);
+        padding: .5rem;
+        border-radius: 50%;
+        transition: rotate 500ms ease;
+    }
+
+    .menu_icon.active{
+        rotate: 90deg;
+    }
+
+    .navigator{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        padding: 8rem 3rem;
+        flex-direction: column;
+        width: calc(100% - 6rem);
+        height: 100vh;
+        background-color: rgba(255, 255, 255, .5);
+        backdrop-filter: blur(5px);
+        transition: left 500ms ease;
+        /*
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        */
+    }
+
+    .navigator.active{
+        left: 0;
+    }
+}
 /*------------------ Header ------------------------*/
 
 /* ----------------- Brand -------------------------*/
@@ -154,26 +219,17 @@ header{
 
 @media only screen and (max-width: 767px) {
     .brand{
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .group-text{
-        font-size: 1.6rem;
-    }
-
-    .names-text{
-        font-size: 2.7rem;
-    }
-
-    .subtitle-text{
-        font-size: .8rem;
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .brand{
-        width: 21rem;
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
 }
 /* ----------------- Brand -------------------------*/
@@ -229,4 +285,14 @@ header{
     background-color: white;
     border-radius: 45%;
 }
+
+@media only screen and (max-width: 767px){
+    .footer{
+        grid-template-columns: 1fr;
+    }
+
+    .enterprise{
+        grid-row: 3 / 4;
+    }
+} 
 /* ----------------- Footer ------------------------*/

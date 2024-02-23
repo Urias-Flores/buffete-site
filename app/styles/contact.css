@@ -1,4 +1,6 @@
 .container{
+    position: relative;
+    z-index: -1;
     margin-top: 2rem;
     padding: 1rem;
 }
@@ -21,21 +23,29 @@
 }
 
 .banner_image{
+    z-index: 0;
     width: 100%;
 }
 
+
+
 .form{
-    background: white;
-    width: 50%;
-    height: 25rem;
-    margin: -25rem auto 0 35rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    translate: (-50%, -50%);
+    background-color: rgb(255,255,255,.4);
+    z-index: 1;
+    width: 30%;
+    padding: 2rem;
+    border-radius: .7rem;
 }
 
 .form input{
     padding: .5rem;
     border-radius: .7rem;
     border: none;
-    width: 100%;
+    width: calc(100% - 1rem);
     margin-bottom: 1.5rem;
     outline: none;
 }
@@ -44,7 +54,7 @@
     border: none;
     border-radius: .7rem;
     height: 4rem;
-    width: 100%;
+    width: calc(100% - 1rem);
     outline: none;
     padding: .5rem;
 }
@@ -53,4 +63,36 @@
     margin-top: 1.5rem;
     color: white;
     background-color: var(--blue);
+    width: 100%
+}
+
+@media only screen and (max-width: 767px){
+    .container{
+        margin-bottom: 22rem;
+    }
+
+    .form{
+        width: 70%;
+        top: 70%;
+        left: 10%;
+        background-color: rgb(200,200, 200,.4);
+        padding: 1rem;
+    }
+
+    .form input, .form textarea {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        margin-bottom: 22rem;
+    }
+    
+    .form{
+        width: 70%;
+        top: 70%;
+        left: 10%;
+        background-color: rgb(200,200, 200,.4);
+    }
 }
