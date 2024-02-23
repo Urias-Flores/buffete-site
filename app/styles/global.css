@@ -178,6 +178,9 @@ header{
     }
 
     .nav_services{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: static;
         margin: 0;
         padding: 0;
@@ -191,7 +194,7 @@ header{
     }
 
     .nav_services.active{
-        height: calc(1.5rem * 5);
+        height: calc(2.5rem * 5);
     }
 
     .nav_service{

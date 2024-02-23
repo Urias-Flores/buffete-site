@@ -9,12 +9,18 @@ export function links(){
     }
   ]
 }
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Inicio | Grupo Sosa Morales" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+
+export function meta(){
+  return (
+    [
+      { title: 'Inicio | Grupo Sosa Morales' },
+      { name: "description", content: "Bienvenido al sitio oficial de Grupo Sosa Morales" },
+      { charset: 'UTF-8' },
+      { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    ]
+  )
+}
 
 export default function Index() {
   return (
