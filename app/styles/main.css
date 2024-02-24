@@ -1,23 +1,80 @@
 /* ----------------- Team --------------------------*/
+.hide{
+    visibility: hidden;
+}
+
+.team_container{
+    display: flex;
+    align-items: center;
+    width: 33rem;
+    margin: 0 auto;
+}
+
 .team{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    margin: 0 auto;
+    width: 25rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     justify-content: space-between;
     margin-top: 1.5rem;
+}
+
+.team::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .member{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.team_chevron{
+    width: 2rem;
+    height: 2rem;
+    padding: .3rem;
+    border-radius: .7rem;
+    background-color: var(--ligth-gray);
+}
+
+.selected{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+    margin: 0 auto;
+    height: 2rem;
+}
+
+.selected_point{
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: lightgray;
+    transition: background-color 300ms ease;
+}
+
+.selected_point.active{
+    background-color: darkgray;
 }
 
 .member_photo{
-    width: 15rem;
+    width: 25rem;
+}
+
+.member_content{
+    width: 100%;
+    background-color: var(--ligth-gray);
+    padding-bottom: 1rem;
 }
 
 .member_name{
-    margin-top: .5rem;
+    margin-top: 1rem;
     color: var(--blue);
     font-weight: normal;
     font-style: italic;
@@ -30,12 +87,31 @@
 }
 
 @media only screen and (max-width: 767px){
+    .container{
+        width: 100%;
+    }
+
     .team{
         grid-template-columns: 1fr;
+        width: 18rem;
     }
 
     .member{
         margin-top: 1.5rem;
+    }
+
+    .team_container{
+        gap: .3rem;
+        width: 90%;
+    }
+
+    .team_chevron{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .member_photo{
+        width: 18rem;
     }
 }
 
