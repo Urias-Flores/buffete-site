@@ -12,6 +12,7 @@ import {ReactNode} from "react";
 
 import Navigator from '~/components/navigator';
 import Footer from "~/components/footer";
+import WhatsappButton from "~/components/whatspp_button";
 import stylesGlobal from '~/styles/global.css';
 import stylesNormalizer from '~/styles/normalizer.css';
 
@@ -77,6 +78,7 @@ function Document({children}: { children: ReactNode }){
    <body>
    <Navigator/>
    {children}
+   <WhatsappButton/>
    <Footer/>
    <ScrollRestoration/>
    <Scripts/>

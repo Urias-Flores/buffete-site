@@ -26,7 +26,6 @@ export function meta(){
 export default function Index() {
   const [memberShowed, setMemberShowed] = useState(1);
 
-
   return (
     <main>
       <div className='container'>
@@ -128,28 +127,28 @@ export default function Index() {
             <p className='service_number'>1</p>
             <hr className='number_line'/>
             <p className='service_title'>Trámites no Contencioso</p>
-            <Link className='service_link' to={'/tramites-no-contenciosos'}>Más información</Link>
+            <Link className='service_link' to={'/services/tramites-no-contenciosos'}>Más información</Link>
           </div>
 
           <div className='service'>
             <p className='service_number'>2</p>
             <hr className='number_line'/>
             <p className='service_title'>Trámites Administrativos</p>
-            <Link className='service_link' to={'/tramites-no-contenciosos'}>Más información</Link>
+            <Link className='service_link' to={'/services/tramites-administrativos'}>Más información</Link>
           </div>
 
           <div className='service'>
             <p className='service_number'>3</p>
             <hr className='number_line'/>
             <p className='service_title'>Escrituras Públicas</p>
-            <Link className='service_link' to={'/tramites-no-contenciosos'}>Más información</Link>
+            <Link className='service_link' to={'/services/escrituras-publicas'}>Más información</Link>
           </div>
 
           <div className='service'>
             <p className='service_number'>4</p>
             <hr className='number_line'/>
             <p className='service_title'>Documentos Privados</p>
-            <Link className='service_link' to={'/tramites-no-contenciosos'}>Más información</Link>
+            <Link className='service_link' to={'/services/documentos-privados'}>Más información</Link>
           </div>
         </section>
       </div>

@@ -17,7 +17,6 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     justify-content: space-between;
-    margin-top: 1.5rem;
 }
 
 .team::-webkit-scrollbar {
@@ -93,15 +92,20 @@
 
     .team{
         grid-template-columns: 1fr;
-        width: 16rem;
+        width: 14rem;
+        margin: 0 auto 0 auto;
     }
 
-    .member{
-        margin-top: 1.5rem;
+    .member_name{
+        font-size: .9rem;
+    }
+
+    .member_information{
+        font-size: .8rem;
     }
 
     .team_container{
-        gap: .3rem;
+        gap: .2rem;
         width: 90%;
     }
 
@@ -111,7 +115,7 @@
     }
 
     .member_photo{
-        width: 16rem;
+        width: 14rem;
     }
 }
 
@@ -127,7 +131,7 @@
 /* ----------------- Team --------------------------*/
 
 /* ----------------- Services ----------------------*/
-.team + .heading{
+.group + .heading{
     margin-top: 9rem;
 }
 

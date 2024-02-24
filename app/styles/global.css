@@ -18,7 +18,7 @@ body{
 }
 
 .heading{
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 2rem;
     text-align: center;
 }
@@ -26,7 +26,7 @@ body{
 
 @media only screen and (max-width: 767px) {
     .heading{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 }
 /*------------------ Header ------------------------*/
@@ -349,3 +349,30 @@ header{
     }
 } 
 /* ----------------- Footer ------------------------*/
+
+/* ------------- Whatsapp Button -------------------*/
+.whatsapp_icon{
+    position: fixed;
+    z-index: 2;
+    bottom: 2rem;
+    right: 2rem;
+    display: block;
+    border-radius: .7rem;
+    background-color: var(--ligth-gray);
+    -webkit-box-shadow: 0 0 5px 0 rgba(179,179,179,1);
+    -moz-box-shadow: 0 0 5px 0 rgba(179,179,179,1);
+    box-shadow: 0 0 5px 0 rgba(179,179,179,1);
+}
+
+.icon_image{
+    width: 3rem;
+    height: 3rem;
+}
+
+@media only screen and (max-width: 767px){
+    .icon_image{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+/* ------------- Whatsapp Button -------------------*/
