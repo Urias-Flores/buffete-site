@@ -299,7 +299,6 @@
 .phrase_text{
     font-size: 2rem;
     color: var(--dark-blue);
-    width: 24rem;
     margin: 0 auto;
     line-height: 2.5rem;
 }
@@ -312,7 +311,7 @@
 
 @media only screen and (max-width: 767px) {
     .phrase_text{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 /* ----------------- Phrase ------------------------*/

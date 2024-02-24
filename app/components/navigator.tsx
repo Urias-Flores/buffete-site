@@ -41,7 +41,7 @@ export default function Navigator (){
               <li><Link className='nav_service'  to='/services/tramites-administrativos' onClick={ () => { setShowMenu(false) }}>Trámites administrativos</Link></li>
               <li><Link className='nav_service'  to='/services/escrituras-publicas' onClick={ () => { setShowMenu(false) }}>Escrituras públicas</Link></li>
               <li><Link className='nav_service'  to='/services/documentos-privados' onClick={ () => { setShowMenu(false) }}>Documentos privados</Link></li>
-              <li><Link className='nav_service'  to='/services/representaciones-procesales' onClick={ () => { setShowMenu(false) }}>Representaciones procesales</Link></li>
+              <li><Link className='nav_service'  to='/services/representaciones-procesales' onClick={ () => { setShowMenu(false) }}>Representaciones procs.</Link></li>
             </ul>
           </div>
           <Link className='navigator_route' to='/contact' onClick={ () => { setShowMenu(false) }}>Contacto</Link>
