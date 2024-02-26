@@ -17,6 +17,7 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     justify-content: space-between;
+    scroll-snap-type: x mandatory;
 }
 
 .team::-webkit-scrollbar {
@@ -30,6 +31,8 @@
     align-items: center;
     padding-top: 3rem;
     margin-bottom: 1rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .team_chevron{

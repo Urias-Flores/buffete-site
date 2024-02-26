@@ -26,6 +26,25 @@ export function meta(){
 export default function Index() {
   const [memberShowed, setMemberShowed] = useState(1);
 
+  const verifyMember = () => {
+    const members = document.querySelectorAll('.member');
+    const team = document.querySelector('.team');
+    const teamRect = team.getBoundingClientRect();
+    const teamLeft = teamRect.left;
+    const teamRight = teamRect.right;
+
+    // Iterar sobre cada miembro
+    members.forEach(member => {
+      const memberRect = member.getBoundingClientRect();
+      if (
+        memberRect.left >= teamLeft &&
+        memberRect.right <= teamRight
+      ) {
+        setMemberShowed(parseInt(member.id.replace('member', '')));
+      }
+    });
+  }
+
   return (
     <main>
       <div className='container'>
@@ -42,7 +61,7 @@ export default function Index() {
               />
             </Link>
 
-            <div className="team">
+            <div className="team" onScroll={ verifyMember }>
               <div className='member' id="member1">
                 <img src="/images/Marco_Sosa.webp" alt="menber" className='member_photo'/>
                 <div className="member_content">
