@@ -1,5 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Link, redirect } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { useState } from "react";
 import stylesMain from '~/styles/main.css';
 export function links(){
