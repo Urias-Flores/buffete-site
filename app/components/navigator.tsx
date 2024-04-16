@@ -18,6 +18,14 @@ export default function Navigator (){
           <Logo/>
           <img src="/images/flag.png" alt="flag" className='flag'/>
         </div>
+
+        <img 
+          src="/images/menu.svg"
+          alt="menu" 
+          className={`menu_icon ${ showMenu && 'active' }`}
+          onClick={ () => { setShowMenu(!showMenu) }}
+        />
+
         <nav className={`navigator ${ showMenu && 'active'}`}>
           <Link className='navigator_route' to='/' onClick={ () => { setShowMenu(false) }}>Inicio</Link>
           <Link className='navigator_route' to='/about' onClick={ () => { setShowMenu(false) }}>Acerca de</Link>
@@ -46,13 +54,6 @@ export default function Navigator (){
           </div>
           <Link className='navigator_route' to='/contact' onClick={ () => { setShowMenu(false) }}>Contacto</Link>
         </nav>
-
-        <img 
-          src="/images/menu.svg"
-          alt="menu" 
-          className={`menu_icon ${ showMenu && 'active' }`}
-          onClick={ () => { setShowMenu(!showMenu) }}
-        />
       </div>
     </header>
   )
